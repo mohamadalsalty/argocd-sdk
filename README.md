@@ -15,7 +15,7 @@ This PHP SDK library provides an easy way to interact with Argo CD's API, allowi
 You can install the library via Composer. Run the following command in your terminal:
 
 ```bash
-composer require alsalty/argocd
+composer require alsalty/argocd-sdk
 ```
 
 ## Usage
