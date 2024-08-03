@@ -1,0 +1,27 @@
+{
+  "name": "alsalty/argocd-sdk",
+  "description": "PHP library for Argo CD",
+  "type": "library",
+  "keywords": [
+    "argocd",
+    "devops",
+    "ArgoCD"
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Alsalty\\Argocd\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "MOHAMAD AL SALTY",
+      "email": "mohamadhazems@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=8",
+    "ext-curl": "*"
+  }
+}
