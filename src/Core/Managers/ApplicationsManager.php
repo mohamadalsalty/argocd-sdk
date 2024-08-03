@@ -68,24 +68,19 @@ class ApplicationsManager implements ApplicationsManagerInterface
             'Authorization: Bearer ' . $token
         ];
 
-        // Associative array to hold query parameters
         $queryParams = [
             'projects' => !empty($this->projects) ? implode(',', $this->projects) : null,
             'appNamespace' => $this->appNamespace,
         ];
 
-        // Filter out null values and build the query string
         $query = http_build_query(array_filter($queryParams, function ($value) {
             return $value !== null;
         }));
 
-        // Append query parameters to the endpoint if any
         if (!empty($query)) {
             $endpoint .= '?' . $query;
         }
 
-        // Debug: output the endpoint for verification
-        echo $endpoint;
 
         $response = Curl::get($endpoint, $headers, true);
         return $response['body'];
